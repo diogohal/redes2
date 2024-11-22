@@ -1,8 +1,7 @@
 import socket
 
-# Configurações do cliente
-HOST = 'localhost'  # Endereço do servidor
-PORT = 12345        # Porta usada pelo servidor
+HOST = 'localhost' 
+PORT = 12345        
 
 # Criação do socket UDP
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)

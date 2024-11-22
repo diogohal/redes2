@@ -13,8 +13,6 @@ print(f"Servidor escutando em {HOST}:{PORT}...")
 while True:
     conn, addr = server_socket.accept()
     print(f"Conexão estabelecida com {addr}")
-    if KeyboardInterrupt:
-        break
     
     while True:
         data = conn.recv(1024)  # Recebe dados, ate 1024
