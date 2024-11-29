@@ -1,0 +1,110 @@
+=== Conectando ao servidor UDP localhost:12345 ===
+
+[INFO] Enviando informações do arquivo: texto1mb.txt (Tamanho: 100656 bytes)
+[ENVIADO] Pacote 1: 1024 bytes | Total: 1024/100656 bytes
+[ENVIADO] Pacote 2: 1024 bytes | Total: 2048/100656 bytes
+[ENVIADO] Pacote 3: 1024 bytes | Total: 3072/100656 bytes
+[ENVIADO] Pacote 4: 1024 bytes | Total: 4096/100656 bytes
+[ENVIADO] Pacote 5: 1024 bytes | Total: 5120/100656 bytes
+[ENVIADO] Pacote 6: 1024 bytes | Total: 6144/100656 bytes
+[ENVIADO] Pacote 7: 1024 bytes | Total: 7168/100656 bytes
+[ENVIADO] Pacote 8: 1024 bytes | Total: 8192/100656 bytes
+[ENVIADO] Pacote 9: 1024 bytes | Total: 9216/100656 bytes
+[ENVIADO] Pacote 10: 1024 bytes | Total: 10240/100656 bytes
+[ENVIADO] Pacote 11: 1024 bytes | Total: 11264/100656 bytes
+[ENVIADO] Pacote 12: 1024 bytes | Total: 12288/100656 bytes
+[ENVIADO] Pacote 13: 1024 bytes | Total: 13312/100656 bytes
+[ENVIADO] Pacote 14: 1024 bytes | Total: 14336/100656 bytes
+[ENVIADO] Pacote 15: 1024 bytes | Total: 15360/100656 bytes
+[ENVIADO] Pacote 16: 1024 bytes | Total: 16384/100656 bytes
+[ENVIADO] Pacote 17: 1024 bytes | Total: 17408/100656 bytes
+[ENVIADO] Pacote 18: 1024 bytes | Total: 18432/100656 bytes
+[ENVIADO] Pacote 19: 1024 bytes | Total: 19456/100656 bytes
+[ENVIADO] Pacote 20: 1024 bytes | Total: 20480/100656 bytes
+[ENVIADO] Pacote 21: 1024 bytes | Total: 21504/100656 bytes
+[ENVIADO] Pacote 22: 1024 bytes | Total: 22528/100656 bytes
+[ENVIADO] Pacote 23: 1024 bytes | Total: 23552/100656 bytes
+[ENVIADO] Pacote 24: 1024 bytes | Total: 24576/100656 bytes
+[ENVIADO] Pacote 25: 1024 bytes | Total: 25600/100656 bytes
+[ENVIADO] Pacote 26: 1024 bytes | Total: 26624/100656 bytes
+[ENVIADO] Pacote 27: 1024 bytes | Total: 27648/100656 bytes
+[ENVIADO] Pacote 28: 1024 bytes | Total: 28672/100656 bytes
+[ENVIADO] Pacote 29: 1024 bytes | Total: 29696/100656 bytes
+[ENVIADO] Pacote 30: 1024 bytes | Total: 30720/100656 bytes
+[ENVIADO] Pacote 31: 1024 bytes | Total: 31744/100656 bytes
+[ENVIADO] Pacote 32: 1024 bytes | Total: 32768/100656 bytes
+[ENVIADO] Pacote 33: 1024 bytes | Total: 33792/100656 bytes
+[ENVIADO] Pacote 34: 1024 bytes | Total: 34816/100656 bytes
+[ENVIADO] Pacote 35: 1024 bytes | Total: 35840/100656 bytes
+[ENVIADO] Pacote 36: 1024 bytes | Total: 36864/100656 bytes
+[ENVIADO] Pacote 37: 1024 bytes | Total: 37888/100656 bytes
+[ENVIADO] Pacote 38: 1024 bytes | Total: 38912/100656 bytes
+[ENVIADO] Pacote 39: 1024 bytes | Total: 39936/100656 bytes
+[ENVIADO] Pacote 40: 1024 bytes | Total: 40960/100656 bytes
+[ENVIADO] Pacote 41: 1024 bytes | Total: 41984/100656 bytes
+[ENVIADO] Pacote 42: 1024 bytes | Total: 43008/100656 bytes
+[ENVIADO] Pacote 43: 1024 bytes | Total: 44032/100656 bytes
+[ENVIADO] Pacote 44: 1024 bytes | Total: 45056/100656 bytes
+[ENVIADO] Pacote 45: 1024 bytes | Total: 46080/100656 bytes
+[ENVIADO] Pacote 46: 1024 bytes | Total: 47104/100656 bytes
+[ENVIADO] Pacote 47: 1024 bytes | Total: 48128/100656 bytes
+[ENVIADO] Pacote 48: 1024 bytes | Total: 49152/100656 bytes
+[ENVIADO] Pacote 49: 1024 bytes | Total: 50176/100656 bytes
+[ENVIADO] Pacote 50: 1024 bytes | Total: 51200/100656 bytes
+[ENVIADO] Pacote 51: 1024 bytes | Total: 52224/100656 bytes
+[ENVIADO] Pacote 52: 1024 bytes | Total: 53248/100656 bytes
+[ENVIADO] Pacote 53: 1024 bytes | Total: 54272/100656 bytes
+[ENVIADO] Pacote 54: 1024 bytes | Total: 55296/100656 bytes
+[ENVIADO] Pacote 55: 1024 bytes | Total: 56320/100656 bytes
+[ENVIADO] Pacote 56: 1024 bytes | Total: 57344/100656 bytes
+[ENVIADO] Pacote 57: 1024 bytes | Total: 58368/100656 bytes
+[ENVIADO] Pacote 58: 1024 bytes | Total: 59392/100656 bytes
+[ENVIADO] Pacote 59: 1024 bytes | Total: 60416/100656 bytes
+[ENVIADO] Pacote 60: 1024 bytes | Total: 61440/100656 bytes
+[ENVIADO] Pacote 61: 1024 bytes | Total: 62464/100656 bytes
+[ENVIADO] Pacote 62: 1024 bytes | Total: 63488/100656 bytes
+[ENVIADO] Pacote 63: 1024 bytes | Total: 64512/100656 bytes
+[ENVIADO] Pacote 64: 1024 bytes | Total: 65536/100656 bytes
+[ENVIADO] Pacote 65: 1024 bytes | Total: 66560/100656 bytes
+[ENVIADO] Pacote 66: 1024 bytes | Total: 67584/100656 bytes
+[ENVIADO] Pacote 67: 1024 bytes | Total: 68608/100656 bytes
+[ENVIADO] Pacote 68: 1024 bytes | Total: 69632/100656 bytes
+[ENVIADO] Pacote 69: 1024 bytes | Total: 70656/100656 bytes
+[ENVIADO] Pacote 70: 1024 bytes | Total: 71680/100656 bytes
+[ENVIADO] Pacote 71: 1024 bytes | Total: 72704/100656 bytes
+[ENVIADO] Pacote 72: 1024 bytes | Total: 73728/100656 bytes
+[ENVIADO] Pacote 73: 1024 bytes | Total: 74752/100656 bytes
+[ENVIADO] Pacote 74: 1024 bytes | Total: 75776/100656 bytes
+[ENVIADO] Pacote 75: 1024 bytes | Total: 76800/100656 bytes
+[ENVIADO] Pacote 76: 1024 bytes | Total: 77824/100656 bytes
+[ENVIADO] Pacote 77: 1024 bytes | Total: 78848/100656 bytes
+[ENVIADO] Pacote 78: 1024 bytes | Total: 79872/100656 bytes
+[ENVIADO] Pacote 79: 1024 bytes | Total: 80896/100656 bytes
+[ENVIADO] Pacote 80: 1024 bytes | Total: 81920/100656 bytes
+[ENVIADO] Pacote 81: 1024 bytes | Total: 82944/100656 bytes
+[ENVIADO] Pacote 82: 1024 bytes | Total: 83968/100656 bytes
+[ENVIADO] Pacote 83: 1024 bytes | Total: 84992/100656 bytes
+[ENVIADO] Pacote 84: 1024 bytes | Total: 86016/100656 bytes
+[ENVIADO] Pacote 85: 1024 bytes | Total: 87040/100656 bytes
+[ENVIADO] Pacote 86: 1024 bytes | Total: 88064/100656 bytes
+[ENVIADO] Pacote 87: 1024 bytes | Total: 89088/100656 bytes
+[ENVIADO] Pacote 88: 1024 bytes | Total: 90112/100656 bytes
+[ENVIADO] Pacote 89: 1024 bytes | Total: 91136/100656 bytes
+[ENVIADO] Pacote 90: 1024 bytes | Total: 92160/100656 bytes
+[ENVIADO] Pacote 91: 1024 bytes | Total: 93184/100656 bytes
+[ENVIADO] Pacote 92: 1024 bytes | Total: 94208/100656 bytes
+[ENVIADO] Pacote 93: 1024 bytes | Total: 95232/100656 bytes
+[ENVIADO] Pacote 94: 1024 bytes | Total: 96256/100656 bytes
+[ENVIADO] Pacote 95: 1024 bytes | Total: 97280/100656 bytes
+[ENVIADO] Pacote 96: 1024 bytes | Total: 98304/100656 bytes
+[ENVIADO] Pacote 97: 1024 bytes | Total: 99328/100656 bytes
+[ENVIADO] Pacote 98: 1024 bytes | Total: 100352/100656 bytes
+[ENVIADO] Pacote 99: 304 bytes | Total: 100656/100656 bytes
+
+[INFO] Transferência concluída.
+[INFO] Tamanho final enviado: 100656 bytes
+[INFO] Pacotes enviados: 99
+[INFO] Pacotes confirmados (ACKs): 99
+[INFO] Tempo total de envio: 0.10 segundos
+
+[INFO] Conexão encerrada.
