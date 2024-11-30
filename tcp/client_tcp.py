@@ -2,10 +2,10 @@ import socket
 import os
 import time
 
-HOST = 'localhost'
+HOST = '10.254.225.23'
 PORT = 12345
 
-file_path = "../texto1mb.txt"  
+file_path = "texto2gb.txt"  
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect((HOST, PORT))
