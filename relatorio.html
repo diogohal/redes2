@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório - Comparação TCP vs UDP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+        }
+        code {
+            background: #f9f9f9;
+            padding: 2px 4px;
+            font-size: 1em;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: #fff;">Relatório: Comparação de Desempenho - TCP vs UDP</h1>
+    </header>
+
+    <section>
+        <h2>Objetivo</h2>
+        <p>
+            O objetivo deste trabalho é medir o desempenho prático de transferências de dados utilizando os protocolos 
+            TCP e UDP, analisando diferenças de eficiência em cenários variados, como transferência de arquivos e dados em memória.
+        </p>
+    </section>
+
+    <section>
+        <h2>Explicação dos Códigos</h2>
+        
+        A implementação foi feita em Python utilizando sockets para comparar os protocolos TCP e UDP em transferência de arquivos
+        entre cliente e servidor. Em ambos os casos, o cliente é responsável por ler o arquivo, dividi-lo em partes e enviá-lo ao 
+        servidor, enquanto o servidor recebe essas partes e armazena o arquivo reconstruído no disco. A estrutura de uso dos sockets
+        é parecida com a vista em aula, porém adaptada ao Python.
+
+        <h3>UDP</h3>
+        <p>
+            O código UDP utiliza sockets para realizar a transferência de arquivos entre cliente e servidor. 
+            O cliente divide o arquivo em pacotes e os envia para o servidor, que os armazena em disco. 
+            <ul>
+                <li><b>Servidor:</b> Usa o método <code>recvfrom</code> para receber pacotes, com timeout configurado para evitar travas.</li>
+                <li><b>Cliente:</b> Lê o arquivo em blocos e envia com <code>sendto</code>. Mede o tempo total de transferência.</li>
+            </ul>
+        </p>
+
+        <h3>TCP</h3>
+        <p>
+            O código TCP utiliza sockets com conexão persistente para garantir entrega ordenada e confiável dos dados.
+            O cliente e o servidor comunicam-se diretamente através de um canal dedicado:
+            <ul>
+                <li><b>Servidor:</b> Aceita conexões com <code>accept</code>, recebe dados com <code>recv</code>, e armazena o arquivo.</li>
+                <li><b>Cliente:</b> Lê o arquivo em blocos e envia com <code>sendall</code>. Mede o tempo e valida a conclusão.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section>
+        <h2>Comparação UDP vs TCP</h2>
+        Os testes realizados com arquivos de tamanhos diferentes (1MB, 10MB, 100MB, 1GB e 2GB) mostraram que, até 100MB, 
+        os tempos de transmissão de TCP e UDP foram muito parecidos. Porém, a partir de arquivos maiores que 100MB, 
+        o UDP começou a se destacar, sendo mais rápido que o TCP tanto nas condições em que houveram fragmentação ou não.
+        Apesar disso, em todos os testes realizados com UDP houve alguma perda de pacotes, sem seguir um padrão claro. 
+        Essa diferença entre os dois protocolos ocorre devido às suas características:
+        <ul>
+            <li>
+                <b>TCP</b>: É confiável, garantindo a entrega e ordem dos dados, mas isso gera sobrecarga. Ele utiliza mecanismos como controle de 
+                congestionamento, confirmações de recebimento e retransmissão de pacotes perdidos, 
+                o que aumenta o tempo total, especialmente em arquivos grandes.
+            </li>
+            <li>
+                <b>UDP</b>: Não possui controle de entrega ou ordem, transmitindo pacotes de forma simples e direta. Isso reduz a sobrecarga, 
+                tornando-o mais rápido, principalmente em redes estáveis, onde perdas são mínimas.
+            </li>
+        </ul>
+
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="graphs/tcp_udp_sem_fragmentacao.png" alt="TCP e UDP sem Fragmentação" style="max-width: 45%; margin: 10px;">
+            <img src="graphs/tcp_udp_com_fragmentacao.png" alt="TCP e UDP com Fragmentação" style="max-width: 45%; margin: 10px;">
+        </div>
+        
+
+        Outra comparação realizada foi com testes usando um BUFFER_SIZE maior que a MTU. Os testes foram feitos com BUFFER_SIZE de 2048 
+        bytes. A MTU da rede utilizada é de 1500 bytes, o que é menor que o valor de 2048 bytes do buffer. Quando o buffer é maior que a 
+        MTU, os pacotes precisam ser fragmentados para se ajustarem ao tamanho máximo permitido pela rede. Nos testes, foi constatado que
+        o tempo de transmissão aumentou para todos os testes realizados com o UDP, mas isso não se aplicou para o TCP, que teve tempos menores
+        para 10MB e 2GB com a fragmentação.
+        <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+            <img src="graphs/tcp_com_sem_fragmentacao.png" alt="TCP com e sem Fragmentação" style="max-width: 45%; margin: 10px;">
+            <img src="graphs/udp_com_sem_fragmentacao.png" alt="UDP com e sem Fragmentação" style="max-width: 45%; margin: 10px;">
+        </div>
+        
+        Por fim, como mencionado anteriormente, a taxa de recebimento de pacotes para o TCP foi de 100% em todos os casos, já para o UDP foi variado
+        sem seguir um padrão aparente. O gráfico abaixo mostra os comparativos dessa taxa.
+        <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+            <img src="graphs/udp_perda_de_pacotes.png" alt="Comparação pacotes recebidos por UDP com e sem Fragmentação" style="max-width: 45%; margin: 10px;">
+        </div>
+    </section>
+
+    <section>
+        <h2>Conclusão</h2>
+        Os testes evidenciaram diferenças claras entre os protocolos TCP e UDP. Até arquivos de 100MB, os tempos de transmissão foram 
+        similares. No entanto, para arquivos maiores, o UDP se destacou em velocidade, apesar de apresentar perdas de pacotes em todos 
+        os testes realizados, enquanto o TCP manteve sua confiabilidade com maior tempo de transmissão devido ao controle rigoroso de 
+        entrega e ordem dos dados.
+
+        Adicionalmente, os testes com BUFFER_SIZE maior que a MTU (2048 bytes em uma rede com MTU de 1500 bytes) mostraram que a 
+        fragmentação aumentou o tempo de transmissão para o protocolo UDP, já para o TCP depende do caso.
+
+        Portanto, recomenda-se o uso do UDP em cenários onde a velocidade é prioridade e pequenas perdas são aceitáveis, enquanto o TCP deve
+         ser escolhido quando a confiabilidade e a integridade dos dados forem fundamentais. Além disso, a configuração cuidadosa do tamanho 
+         do buffer para evitar fragmentação pode otimizar o desempenho em ambos os protocolos a depender do caso analisado.
+    </section>
+
+    <footer>
+        <p>&copy; 2024 - Trabalho de Redes de Computadores</p>
+    </footer>
+</body>
+</html>
